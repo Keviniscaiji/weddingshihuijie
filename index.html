@@ -104,7 +104,7 @@
         font-size: 12px;
         color: rgba(255, 220, 160, 0.85);
         display: flex;
-        justify-content: space-between;
+        justify-content: center; /* 改为居中，仅显示状态 */
       }
     </style>
   </head>
@@ -131,7 +131,6 @@
         <div class="output" id="out"></div>
         <span class="cursor"></span>
         <div class="footer">
-          <div id="time"></div>
           <div id="state">运行中</div>
         </div>
       </div>
@@ -139,7 +138,6 @@
 
     <script>
       const out = document.getElementById("out");
-      const timeBox = document.getElementById("time");
       const stateBox = document.getElementById("state");
 
       // 严格保留原版文案
@@ -179,25 +177,6 @@
         setTimeout(typeNext, 150);
       }
 
-      function updateTime() {
-        const d = new Date();
-        const p = (n) => String(n).padStart(2, "0");
-        timeBox.textContent =
-          d.getFullYear() +
-          "年" +
-          p(d.getMonth() + 1) +
-          "月" +
-          p(d.getDate()) +
-          "日 " +
-          p(d.getHours()) +
-          ":" +
-          p(d.getMinutes()) +
-          ":" +
-          p(d.getSeconds());
-      }
-
-      setInterval(updateTime, 1000);
-      updateTime();
       typeNext();
 
       /* 特效系统 — 烟花与鞭炮碎屑 */
