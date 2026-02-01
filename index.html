@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 <!doctype html>
-=======
-</html>
-<!DOCTYPE html>
->>>>>>> 06c169557d1c4cf49141848eafe37b8f14790378
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
@@ -151,7 +146,6 @@
       const script = [
         "系统初始化中...",
         "核心模块加载完毕。",
-        "正在建立新婚连接...",
         "在这个特别的日子里，",
         "愿你们：",
         "在两人一起的的日子里共享晨昏与四季，",
@@ -181,8 +175,7 @@
           char = 0;
         }
         out.textContent = buffer;
-        // 速度调慢：80ms
-        setTimeout(typeNext, 80);
+        setTimeout(typeNext, 150);
       }
 
       function updateTime() {
